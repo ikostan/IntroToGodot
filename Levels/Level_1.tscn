@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Terrain.tres" type="TileSet" id=2]
+[ext_resource path="res://Hazards/SpikesTop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Items/Spring.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/Spring.gd" type="Script" id=6]
+[ext_resource path="res://Levels/GameState.gd" type="Script" id=7]
+
+[node name="Level_1" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2065.44, -1631.58 )
+collision_mask = 2147483662
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( -2424873, 1, 0, -2359337, 1, 0, -2293801, 1, 0, -2228265, 1, 0, -2162729, 1, 0, -2097193, 1, 0, -2031657, 1, 0, -1966121, 1, 0, -1900585, 1, 0, -1835049, 1, 0, -1769513, 1, 0, -1703977, 1, 0, -1638441, 1, 0, -1572905, 1, 0, -1507369, 1, 0, -1441833, 1, 0, -1376297, 1, 0, -1441760, 0, 0, -1441755, 0, 0, -1441750, 0, 0, -1441745, 0, 0, -1441741, 0, 0, -1310761, 1, 0, -1376226, 1, 0, -1376224, 536870913, 0, -1245225, 1, 0, -1179689, 1, 0, -1114153, 1, 0, -1048617, 1, 0, -1114093, 0, 0, -983081, 1, 0, -1048557, 0, 0, -917545, 1, 0, -983021, 0, 0, -852009, 1, 0, -917485, 0, 0, -786473, 1, 0, -851954, 0, 0, -851949, 536870912, 0, -720937, 1, 0, -786423, 0, 0, -786418, 536870912, 0, -786413, 536870912, 0, -786380, 536870913, 0, -655401, 1, 0, -720892, 0, 0, -720887, 536870912, 0, -589865, 1, 0, -589830, 0, 0, -589825, 0, 0, -655356, 536870912, 0, -524329, 1, 0, -524299, 0, 0, -524294, 536870912, 0, -458793, 1, 0, -458768, 0, 0, -458763, 536870912, 0, -393257, 1, 0, -393237, 0, 0, -393233, 536870912, 0, -327721, 1, 0, -393151, 1, 0, -262185, 1, 0, -262173, 1, 0, -327640, 536870913, 0, -327615, 1, 0, -327614, 1, 0, -327612, 1, 0, -196649, 1, 0, -196637, 1, 0, -262104, 536870913, 0, -262079, 1, 0, -262077, 1, 0, -262075, 1, 0, -262073, 1, 0, -131113, 1, 0, -131101, 1, 0, -196568, 1, 0, -196543, 1, 0, -196541, 1, 0, -196539, 1, 0, -196538, 1, 0, -196536, 1, 0, -196534, 1, 0, -65577, 1, 0, -65575, 0, 0, -65572, 0, 0, -65570, 0, 0, -65568, 0, 0, -65565, 0, 0, -131035, 1, 0, -131033, 1, 0, -131007, 1, 0, -131005, 1, 0, -131003, 1, 0, -131001, 1, 0, -130999, 1, 0, -130998, 1, 0, -130997, 1, 0, -130995, 1, 0, -26, 1, 0, -24, 1, 0, -65502, 1, 0, -65500, 1, 0, -65471, 1, 0, 65512, 1, 0, 65514, 1, 0, 31, 1, 0, 33, 1, 0, 65, 1, 0, 131049, 536870913, 0, 131051, 1, 0, 131052, 1, 0, 65562, 1, 0, 65564, 1, 0, 65566, 1, 0, 65601, 1, 0, 196587, 536870913, 0, 196589, 1, 0, 196590, 1, 0, 131137, 1, 0, 262125, 536870913, 0, 262127, 1, 0, 262128, 1, 0, 196673, 1, 0, 196691, 1, 0, 196693, 1, 0, 327663, 536870913, 0, 327665, 1, 0, 327666, 1, 0, 262209, 1, 0, 262224, 1, 0, 262226, 1, 0, 262228, 1, 0, 393202, 536870913, 0, 393203, 1, 0, 393204, 1, 0, 327745, 1, 0, 327757, 1, 0, 327759, 1, 0, 327761, 1, 0, 458740, 536870913, 0, 458741, 1, 0, 458743, 0, 0, 458747, 0, 0, 458751, 0, 0, 393216, 0, 0, 393221, 0, 0, 393226, 0, 0, 393230, 0, 0, 393235, 0, 0, 393239, 1, 0, 393281, 1, 0, 393290, 1, 0, 393292, 1, 0, 393294, 1, 0, 458774, 1, 0, 458775, 1, 0, 458777, 0, 0, 458817, 1, 0, 458819, 1, 0, 458820, 0, 0, 458825, 1, 0, 458827, 1, 0, 524316, 1, 0, 524317, 1, 0, 524318, 0, 0, 524322, 1, 0, 524324, 0, 0, 524353, 1, 0, 524355, 1, 0, 524357, 1, 0, 524359, 1, 0, 524360, 1, 0, 589859, 1, 0, 589861, 1, 0, 589863, 1, 0, 589865, 1, 0, 589883, 1, 0, 589884, 0, 0, 589889, 1, 0, 655400, 1, 0, 655401, 1, 0, 655403, 0, 0, 655407, 0, 0, 655408, 0, 0, 655409, 0, 0, 655413, 0, 0, 655414, 0, 0, 655419, 1, 0 )
+
+[node name="Items" type="Node" parent="."]
+
+[node name="Spring" parent="Items" instance=ExtResource( 5 )]
+position = Vector2( 3976.69, 548.241 )
+collision_layer = 8
+script = ExtResource( 6 )
+
+[node name="Spring2" parent="Items" instance=ExtResource( 5 )]
+position = Vector2( -2303.31, -164.214 )
+collision_layer = 8
+script = ExtResource( 6 )
+
+[node name="Hazards" type="Node" parent="."]
+
+[node name="SpikesTop" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 2468.82, -1438.98 )
+collision_layer = 4
+
+[node name="SpikesTop2" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( -14.1423, -667.509 )
+collision_layer = 4
+
+[node name="SpikesTop3" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 1931.82, 42.4264 )
+collision_layer = 4
+
+[node name="SpikesTop4" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 1148.34, 362.039 )
+collision_layer = 4
+
+[node name="SpikesTop5" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 312.95, 366.286 )
+collision_layer = 4
+
+[node name="SpikesTop6" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( -507.765, 356.195 )
+collision_layer = 4
+
+[node name="AudioStreamBackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+autoplay = true
+[connection signal="area_shape_entered" from="Items/Spring" to="Items/Spring" method="_on_Spring_area_shape_entered"]
+[connection signal="body_entered" from="Items/Spring" to="Items/Spring" method="_on_Spring_body_entered"]
+[connection signal="area_shape_entered" from="Items/Spring2" to="Items/Spring2" method="_on_Spring_area_shape_entered"]
+[connection signal="body_entered" from="Items/Spring2" to="Items/Spring2" method="_on_Spring_body_entered"]
