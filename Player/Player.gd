@@ -6,10 +6,10 @@ var player_position = Vector2(0,0)
 
 const GRAVITY = 250
 const WALK_SPEED = 1500
-const JUMP_SPEED = 3600
+const JUMP_SPEED = 3700
 const UP = Vector2(0,-1)
 const WORLD_END = 10000
-const BOOST = 1.2
+const BOOST = 2
 
 
 func _physics_process(delta):
@@ -24,15 +24,12 @@ func _physics_process(delta):
 func applay_graviation():
 		
 	if position.y > WORLD_END:
-		
 		# load GLOBALS
 		var globals = preload("res://Levels/GameState.gd")
 		if globals.DEBUG:
 			print(self.name, ' > ', 'applay_graviation', ' > fell off')
-			
 		get_tree().call_group('GameState', 'game_over')
-	
-	if is_on_floor():
+	elif is_on_floor() and player_position.y > 0:
 		player_position.y = 0
 	elif is_on_ceiling():
 		player_position.y = 1
@@ -59,14 +56,11 @@ func hurt():
 	if globals.DEBUG:
 		print(self.name, ' > ', 'hurt')
 	
-	# play sound
-	#$AudioStreamPain.stream = load("res://SFX/pain.ogg")
-	$AudioStreamPain.play()
-	
 	# JUMP
 	position.y -= 1
 	yield(get_tree(), "idle_frame")
-	player_position.y -= JUMP_SPEED / 1.5
+	player_position.y = - (JUMP_SPEED / 1.2)
+	$AudioStreamPain.play()
 		
 		
 func boost():
@@ -80,7 +74,7 @@ func boost():
 	# JUMP + BOOST
 	position.y -= 1
 	yield(get_tree(), "idle_frame")
-	player_position.y -= JUMP_SPEED * BOOST
+	player_position.y = -(JUMP_SPEED * BOOST)
 
 
 func walk():

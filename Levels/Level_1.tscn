@@ -86,9 +86,6 @@ position = Vector2( -2279.67, -1574.16 )
 [node name="Coin17" parent="Items/Coins" instance=ExtResource( 9 )]
 position = Vector2( -2283.67, -430.158 )
 
-[node name="Coin18" parent="Items/Coins" instance=ExtResource( 9 )]
-position = Vector2( -2275.67, -2330.16 )
-
 [node name="Coin19" parent="Items/Coins" instance=ExtResource( 9 )]
 position = Vector2( -2279.67, -2138.16 )
 
@@ -113,15 +110,15 @@ position = Vector2( -2290.4, -645.99 )
 [node name="Hazards" type="Node" parent="."]
 
 [node name="SpikesTop" parent="Hazards" instance=ExtResource( 3 )]
-position = Vector2( 2468.82, -1438.98 )
+position = Vector2( 2467.63, -1429.47 )
 collision_layer = 4
 
 [node name="SpikesTop2" parent="Hazards" instance=ExtResource( 3 )]
-position = Vector2( -14.1423, -667.509 )
+position = Vector2( -14.1423, -657.985 )
 collision_layer = 4
 
 [node name="SpikesTop3" parent="Hazards" instance=ExtResource( 3 )]
-position = Vector2( 1931.82, 42.4264 )
+position = Vector2( 1907.85, 46.9213 )
 collision_layer = 4
 
 [node name="SpikesTop4" parent="Hazards" instance=ExtResource( 3 )]
@@ -133,7 +130,7 @@ position = Vector2( 312.95, 366.286 )
 collision_layer = 4
 
 [node name="SpikesTop6" parent="Hazards" instance=ExtResource( 3 )]
-position = Vector2( -507.765, 356.195 )
+position = Vector2( -494.551, 363.687 )
 collision_layer = 4
 
 [node name="AudioStreamBackgroundMusic" type="AudioStreamPlayer" parent="."]
