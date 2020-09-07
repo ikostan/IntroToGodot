@@ -1,5 +1,7 @@
 ## [Discovering Godot: Make Video Games in Python-like GDScript](https://www.udemy.com/course/godot/)
 
+![Screenshot](https://github.com/ikostan/IntroToGodot/blob/master/GFX/Screens/Capture.JPG)
+
 Game development with Godot Engine 3.0 & above :: Learn to code in Python-like GDScript
 
 The original cource content created by: [Ben Tristem](https://www.udemy.com/user/bentristem/), [Yann Burrett](https://www.udemy.com/user/yann-burrett/), and GameDev.tv Team.
