@@ -1,6 +1,7 @@
 extends Node2D
 
 const DEBUG = true
+const COINS_TO_LIVE = 10
 
 var live = 10
 var coins = 0
@@ -13,6 +14,13 @@ func _ready():
 
 func update_coins():
 	coins += 1
+	
+	# auto exchange coins to lives
+	if coins >= 10:
+		var lives_diff = int(coins / COINS_TO_LIVE)
+		live += lives_diff
+		coins -= (lives_diff * COINS_TO_LIVE)
+	
 	update_gui()
 
 
