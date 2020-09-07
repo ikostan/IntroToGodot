@@ -14,8 +14,7 @@ func _on_Area2D_body_entered(body):
 		get_tree().call_group("GameState", 'update_coins')
 		$AudioStreamPlayer2D.play()
 		$AnimationPlayer.play("CoinDisappear")
-	
-	taken = true
+		taken = true
 
 
 func die():
