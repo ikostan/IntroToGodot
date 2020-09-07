@@ -8,7 +8,16 @@ var coins = 0
 
 func _ready():
 	add_to_group('GameState')
-	get_tree().call_group('GUI', 'update_live', live)
+	update_gui()
+
+
+func update_coins():
+	coins += 1
+	update_gui()
+
+
+func update_gui():
+	get_tree().call_group('GUI', 'update_lives', live)
 	get_tree().call_group('GUI', 'update_coins', coins)
 
 
@@ -27,7 +36,7 @@ func applay_damage():
 		$Player.hurt()
 		
 	live -= 1
-	get_tree().call_group('GUI', 'update_live', live)
+	update_gui()
 	
 	if live < 0:
 		game_over()

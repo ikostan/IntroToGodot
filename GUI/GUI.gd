@@ -1,8 +1,8 @@
 extends CanvasLayer
 
 
-func update_live(live):
-	$Control/VBoxContainer/LiveCount.text = 'Live: ' + str(live)
+func update_lives(live):
+	$Control/VBoxContainer/LiveCount.text = 'Lives: ' + str(live)
 
 
 func update_coins(coins):
