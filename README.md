@@ -1,4 +1,4 @@
-# [Discovering Godot: Make Video Games in Python-like GDScript](https://www.udemy.com/course/godot/)
+## [Discovering Godot: Make Video Games in Python-like GDScript](https://www.udemy.com/course/godot/)
 
 Game development with Godot Engine 3.0 & above :: Learn to code in Python-like GDScript
 
