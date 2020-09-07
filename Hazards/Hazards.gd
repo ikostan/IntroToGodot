@@ -2,7 +2,7 @@ extends Area2D
 
 
 func _on_SpikesTop_body_entered(body):
-	"SpikesTop listener"
+	"SpikesTop, NPC listener"
 	
 	# DEBUG only
 	# load GLOBALS
