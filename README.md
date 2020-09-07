@@ -1,6 +1,8 @@
 ## [Discovering Godot: Make Video Games in Python-like GDScript](https://www.udemy.com/course/godot/)
 
-![Screenshot](https://github.com/ikostan/IntroToGodot/blob/master/GFX/Screens/Capture.JPG)
+<p align="center">
+  <img src="https://github.com/ikostan/IntroToGodot/blob/master/GFX/Screens/Capture.JPG" width="40%" title="Screenshot">
+</p>
 
 Game development with Godot Engine 3.0 & above :: Learn to code in Python-like GDScript
 
