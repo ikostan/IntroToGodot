@@ -1,13 +1,12 @@
 extends Area2D
 
-# load GLOBALS
-var globals = preload("res://Levels/GameState.gd")
-
 
 func _on_SpikesTop_body_entered(body):
 	"SpikesTop listener"
 	
 	# DEBUG only
+	# load GLOBALS
+	var globals = preload("res://Levels/GameState.gd")
 	if globals.get('DEBUG'):
 		print(self.name, ' > ', '_on_SpikesTop_body_entered')
 	

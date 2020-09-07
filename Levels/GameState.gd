@@ -3,10 +3,13 @@ extends Node2D
 const DEBUG = true
 
 var live = 10
+var coins = 0
 
 
 func _ready():
 	add_to_group('GameState')
+	get_tree().call_group('GUI', 'update_live', live)
+	get_tree().call_group('GUI', 'update_coins', coins)
 
 
 func game_over():
@@ -24,6 +27,8 @@ func applay_damage():
 		$Player.hurt()
 		
 	live -= 1
+	get_tree().call_group('GUI', 'update_live', live)
+	
 	if live < 0:
 		game_over()
 		

@@ -4,9 +4,6 @@ signal animate
 
 var player_position = Vector2(0,0)
 
-# load GLOBALS
-var globals = preload("res://Levels/GameState.gd")
-
 const GRAVITY = 250
 const WALK_SPEED = 1500
 const JUMP_SPEED = 3600
@@ -28,6 +25,8 @@ func applay_graviation():
 		
 	if position.y > WORLD_END:
 		
+		# load GLOBALS
+		var globals = preload("res://Levels/GameState.gd")
 		if globals.DEBUG:
 			print(self.name, ' > ', 'applay_graviation', ' > fell off')
 			
@@ -55,6 +54,8 @@ func animate_player():
 
 
 func hurt():
+	# load GLOBALS
+	var globals = preload("res://Levels/GameState.gd")
 	if globals.DEBUG:
 		print(self.name, ' > ', 'hurt')
 	
@@ -71,6 +72,8 @@ func hurt():
 func boost():
 	"Boost the jump function when enters spring object"
 	
+	# load GLOBALS
+	var globals = preload("res://Levels/GameState.gd")
 	if globals.DEBUG:
 		print(self.name, ' > ', 'boost')
 	
