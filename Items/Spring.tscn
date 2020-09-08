@@ -37,7 +37,6 @@ tracks/0/keys = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "boost"
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

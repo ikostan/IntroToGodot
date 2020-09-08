@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://NPC/Cloud.gd" type="Script" id=1]
+[ext_resource path="res://GFX/Enemies/cloud.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Cloud"
+length = 8.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 2, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 400, 0 ), Vector2( -400, 0 ) ]
+}
+
+[node name="Cloud" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 0.654902, 0.631373, 0.631373, 1 )
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Sprite"]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+autoplay = "Cloud"
+anims/Cloud = SubResource( 2 )
+
+[node name="CloudRayCast2D" type="RayCast2D" parent="Sprite"]
+position = Vector2( 0, 60 )
+enabled = true
+cast_to = Vector2( 0, 2000 )
+[connection signal="timeout" from="Sprite/Timer" to="Sprite" method="_on_Timer_timeout"]
