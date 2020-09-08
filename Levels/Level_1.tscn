@@ -165,6 +165,18 @@ position = Vector2( 2922.2, -1483 )
 [node name="Cloud" parent="Hazards/Clouds" instance=ExtResource( 11 )]
 position = Vector2( -1841.96, -2368 )
 
+[node name="Cloud2" parent="Hazards/Clouds" instance=ExtResource( 11 )]
+position = Vector2( -517.457, -1882.55 )
+
+[node name="Cloud3" parent="Hazards/Clouds" instance=ExtResource( 11 )]
+position = Vector2( 2820.77, -2511.84 )
+
+[node name="Cloud4" parent="Hazards/Clouds" instance=ExtResource( 11 )]
+position = Vector2( 1166.64, -2098.3 )
+
+[node name="Cloud5" parent="Hazards/Clouds" instance=ExtResource( 11 )]
+position = Vector2( 4984.33, -1379.12 )
+
 [node name="AudioStreamBackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = -10.0

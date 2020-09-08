@@ -26,3 +26,4 @@ func _on_LightingArea2D_body_entered(body):
 	
 	if body.name == 'Player':
 		get_tree().call_group('GameState', 'applay_damage')
+	queue_free()
