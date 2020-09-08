@@ -13,7 +13,7 @@ The original cource content created by: [Ben Tristem](https://www.udemy.com/user
 - Section 3: Hoppy Days 3.1 - Discovering the Engine (basic 2D game)
 - Create video games in an object-oriented environment.
 - Write code in GDScript, and transfer your knowledge to Python.
-- Program compelling 2D word, platform & stealth games.
+- Program compelling 2D word.
 - How Godot can make your game idea come to life - for free.
 - Re-use any existing programming knowledge in a user-friendly engine.
 - How to code from scratch a fun-way by making games.
