@@ -17,9 +17,11 @@ animations = [ {
 extents = Vector2( 27.5435, 56.6479 )
 
 [node name="Lighting" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="LightingArea2D" type="Area2D" parent="."]
-script = ExtResource( 3 )
+collision_layer = 4
+collision_mask = 3
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="LightingArea2D"]
 frames = SubResource( 1 )
@@ -33,4 +35,5 @@ stream = ExtResource( 4 )
 volume_db = -5.0
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="LightingArea2D"]
-[connection signal="screen_exited" from="LightingArea2D/VisibilityNotifier2D" to="LightingArea2D" method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="body_entered" from="LightingArea2D" to="." method="_on_LightingArea2D_body_entered"]
+[connection signal="screen_exited" from="LightingArea2D/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

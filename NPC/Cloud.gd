@@ -4,17 +4,19 @@ var reload = false
 
 
 func _process(delta):
-	if $Sprite/CloudRayCast2D.is_colliding() and not reload:
+	if $Sprite/CloudRayCast2D.is_colliding():
 		fire()
-		reload = true
-		$Sprite/Timer.start()
 
 
 func fire():
 	var globals = preload("res://Levels/GameState.gd")
 	if globals.DEBUG:
-		print(self.name, ' > ', 'fire')
-	add_child(load("res://Hazards/Lighting.tscn").instance())
+			print(self.name, ' > ', 'fire')
+	
+	if not reload:
+		$Sprite/CloudRayCast2D.add_child(load("res://Hazards/Lighting.tscn").instance())
+		$Sprite/Timer.start()
+		reload = true
 
 
 func _on_Timer_timeout():

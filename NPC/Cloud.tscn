@@ -39,4 +39,4 @@ anims/Cloud = SubResource( 2 )
 position = Vector2( 0, 60 )
 enabled = true
 cast_to = Vector2( 0, 2000 )
-[connection signal="timeout" from="Sprite/Timer" to="Sprite" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Sprite/Timer" to="." method="_on_Timer_timeout"]
