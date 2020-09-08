@@ -37,6 +37,14 @@ func game_over():
 	get_tree().change_scene("res://Scenes/GameOver/GameOver.tscn")
 
 
+func win_game():
+	"Exit game level and open Game Over scene"
+	
+	if DEBUG:
+		print(self.name, ' > ', 'win_game', ' live: ', live, ' coins: ', coins)
+	get_tree().change_scene("res://Scenes/Victory/Victory.tscn")
+
+
 func applay_damage():
 	"Applay dammage on Player object"
 	
