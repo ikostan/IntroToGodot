@@ -35,7 +35,7 @@ orbit_velocity = 0.25
 orbit_velocity_random = 0.0
 
 [node name="Portal" type="Node2D"]
-scale = Vector2( 1.123, 1 )
+scale = Vector2( 1.22273, 1 )
 script = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
