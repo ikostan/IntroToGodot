@@ -2,8 +2,9 @@
 
 [ext_resource path="res://GFX/Particles/lighting_blue.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Particles/lighting_yellow.png" type="Texture" id=2]
-[ext_resource path="res://Hazards/Lighting.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Hazards/Lighting.gd" type="Script" id=3]
 [ext_resource path="res://SFX/thunder2.wav" type="AudioStream" id=4]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

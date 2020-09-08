@@ -9,12 +9,12 @@ func _process(delta):
 
 
 func fire():
-	var globals = preload("res://Levels/GameState.gd")
-	if globals.DEBUG:
-			print(self.name, ' > ', 'fire')
-	
 	if not reload:
-		$Sprite/CloudRayCast2D.add_child(load("res://Hazards/Lighting.tscn").instance())
+		var globals = preload("res://Levels/GameState.gd")
+		if globals.DEBUG:
+			print(self.name, ' > ', 'fire')
+			
+		$Sprite/CloudRayCast2D.add_child(load("res://Scenes/Hazards/Lighting.tscn").instance())
 		$Sprite/Timer.start()
 		reload = true
 

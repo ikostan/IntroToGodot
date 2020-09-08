@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://NPC/Cloud.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/NPC/Cloud.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Enemies/cloud.png" type="Texture" id=2]
+
 
 [sub_resource type="Animation" id=2]
 resource_name = "Cloud"

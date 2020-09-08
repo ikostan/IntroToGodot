@@ -34,7 +34,7 @@ func game_over():
 	
 	if DEBUG:
 		print(self.name, ' > ', 'game_over', ' live: ', live)
-	get_tree().change_scene("res://GameOver/GameOver.tscn")
+	get_tree().change_scene("res://Scenes/GameOver/GameOver.tscn")
 
 
 func applay_damage():
